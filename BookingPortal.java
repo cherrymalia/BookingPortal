@@ -6,13 +6,19 @@
  * @date Oct. 2022
  **/
 
-
 /**
- * The BookingPortal class is the main class for the Booking Portal application.
- * It is responsible for creating the GUI and handling all events.
+ * The BookingPortal class is the main class for the Booking Portal
+ * application.
+ * It contains the main method for the Booking Portal application.
  * 
  */
 public class BookingPortal extends BookingPortalUI {
+
+    /**
+     * The main method creates a new BookingPortal object and calls the run method.
+     * 
+     * @param args the command line arguments
+     */
     public static void main(String args[]) {
 
         BookingPortalUI reservationSystem = new BookingPortalUI();

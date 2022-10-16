@@ -20,11 +20,14 @@ A constructor sets the number of rooms.
 ```
 3. makeReservation():
 ```
-A person reserves a room via makereservation method. This method returns an integer indicating the room number and room type. If a customer tries to reserve a room but the rooms are sold out an error message should be displayed.
+A person reserves a room via makereservation method. This method returns an integer indicating 
+the room number and room type. If a customer tries to reserve a room but the rooms are sold out 
+an error message should be displayed.
 ```
 4. Confirmation:
 ```
-If a customer reserved a room the person’s name, arrival date, departure date, room number and total charge should be displayed. 
+If a customer reserved a room the person’s name, arrival date, departure date, room 
+number and total charge should be displayed. 
 ```
 5. Inheritance:
 ```

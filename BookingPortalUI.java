@@ -464,7 +464,7 @@ public class BookingPortalUI extends JFrame {
         LocalDate today = LocalDate.now();
 
         if (startDate.isBefore(today) || endDate.isBefore(today)) {
-            JOptionPane.showMessageDialog(null, "Dates cannot be a date in the past", "Invalid Dates",
+            JOptionPane.showMessageDialog(null, "<html>Cannot be a date in the past</html>", "Invalid Dates",
                     JOptionPane.WARNING_MESSAGE);
             if (roomList.getSelectedRow() != -1) {
                 roomList.clearSelection();
@@ -473,14 +473,14 @@ public class BookingPortalUI extends JFrame {
         }
         Period nights = Period.between(startDate, endDate);
         if (nights.getMonths() != 0 || nights.getYears() != 0) {
-            JOptionPane.showMessageDialog(null, "Reservations cannot be longer than 30 days", "Invalid Dates",
+            JOptionPane.showMessageDialog(null, "<html>Reservations cannot be longer than 30 days</html>", "Invalid Dates",
                     JOptionPane.WARNING_MESSAGE);
             if (roomList.getSelectedRow() != -1) {
                 roomList.clearSelection();
             }
             return 0;
         } else if (nights.getDays() < 0) {
-            JOptionPane.showMessageDialog(null, "Select valid check-in and check-out dates", "Invalid Dates",
+            JOptionPane.showMessageDialog(null, "<html>Select valid check-in and check-out dates</html>", "Invalid Dates",
                     JOptionPane.WARNING_MESSAGE);
             if (roomList.getSelectedRow() != -1) {
                 roomList.clearSelection();
@@ -574,28 +574,28 @@ public class BookingPortalUI extends JFrame {
         int result = makeReservation();
         switch (result) {
             case (0): {
-                JOptionPane.showMessageDialog(null, "Please select a room", "Selection Required",
+                JOptionPane.showMessageDialog(null, "<html>Please select a room</html>", "Selection Required",
                         JOptionPane.ERROR_MESSAGE);
                 break;
             }
             case (1): {
-                JOptionPane.showMessageDialog(null, "Enter first and last name", "Invalid Name",
+                JOptionPane.showMessageDialog(null, "<html>Enter first and last name</html>", "Invalid Name",
                         JOptionPane.WARNING_MESSAGE);
                 break;
             }
             case (2): {
-                JOptionPane.showMessageDialog(null, "Enter check-in and check-out dates", "Invalid Date",
+                JOptionPane.showMessageDialog(null, "<html>Enter check-in and check-out dates</html>", "Invalid Date",
                         JOptionPane.WARNING_MESSAGE);
                 break;
             }
             case (3): {
-                JOptionPane.showMessageDialog(null, "Hit Update to confirm total before booking", "More Information",
+                JOptionPane.showMessageDialog(null, "<html>Hit Update to confirm total</html>", "More Information",
                         JOptionPane.WARNING_MESSAGE);
                 break;
             }
             case (4): {
                 JOptionPane.showMessageDialog(null,
-                        "This room is already booked. Please select an available room.", "Room Unavailable",
+                        "<html>This room is already booked. Please select an available room.</html>", "Room Unavailable",
                         JOptionPane.ERROR_MESSAGE);
                 break;
             }
@@ -616,10 +616,10 @@ public class BookingPortalUI extends JFrame {
         NumberFormat money = NumberFormat.getCurrencyInstance();
 
         if (!checkIn.matches(regex)) {
-            JOptionPane.showMessageDialog(null, "Enter a valid check-in date\n Format: mm/dd/yyyy",
+            JOptionPane.showMessageDialog(null, "<html>Enter a valid check-in date<br/>Format: mm/dd/yyyy</html>",
                     "Invalid Check-In Date", JOptionPane.WARNING_MESSAGE);
         } else if (!checkOut.matches(regex)) {
-            JOptionPane.showMessageDialog(null, "Enter a valid check-out date\n Format: mm/dd/yyyy",
+            JOptionPane.showMessageDialog(null, "<html>Enter a valid check-out date<br/>Format: mm/dd/yyyy</html>",
                     "Invalid Check-Out Date", JOptionPane.WARNING_MESSAGE);
         } else {
             LocalDate start = LocalDate.parse(inDate.getText(), formatter);

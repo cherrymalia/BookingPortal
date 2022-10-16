@@ -7,6 +7,7 @@
  * @date Oct. 2022
  **/
 
+ // Import statements
 import javax.swing.*;
 import javax.swing.table.*;
 import javax.swing.border.*;
@@ -110,7 +111,7 @@ public class BookingPortalUI extends JFrame {
         roomList = new JTable();
 
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
-        setTitle("Mariott Reservation System");
+        setTitle("Marriott Reservation System");
         setBounds(new Rectangle(0, 0, 0, 0));
         setCursor(new Cursor(Cursor.DEFAULT_CURSOR));
         setResizable(false);
@@ -749,10 +750,7 @@ public class BookingPortalUI extends JFrame {
         }
     }
 
-     /**
-     * Variable declarations
-     * 
-     */
+     // Variables declaration
     private JLabel OutLabel;
     private JButton bookButton;
     private JPanel datePanel;
